@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+
+</head>
+<script>
+
+ 
+ 
+
+    function removeModal(){
+        document.getElementById('myModal').removeAttribute('style');
+    }
+
+
+    
+
+</script>
+<body>
+
+  <div class="dropdown float-right m-2">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="material-icons ">
+      account_circle
+      </span>
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown_list"><a href="setting.html"><span class="material-icons dropdown_icon">
+        settings
+        </span> Settings</a></li>
+      <li class="dropdown_list"><a href="chating.html"><span class="material-icons dropdown_icon2">
+        chat
+        </span>Chating</a></li>
+    </ul>
+  </div>
+
+  
+
+<div class="container">
+
+   
+
+  <!-- The Modal -->
+  <div class="modal" style="display: block;" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <img class="modal_heading_img mx-auto d-block img-fluid" src="gaming.png" alt="">
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form >
+                <div class="form-group">
+                  <label for="phone">Phone:</label>
+                  <input type="number" class="form-control" id="phone" placeholder="Enter Phone" name="phone">
+                </div>
+                
+              </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer" style="justify-content: center;">
+            <a type="submit" class="btn btn-primary float-left"  onclick="removeModal()"  data-toggle="modal" data-target="#myModal2">Submit</a>
+
+          <a type="a" class="btn btn-danger" data-dismiss="modal" id="close_modal" onclick="removeModal()">Close</a>
+        </div>
+        
+      </div>
+    </div>
+
+ 
+  </div>
+  
+</div>
+
+  <!-- The Modal -->
+  <div class="modal"  id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <img class="modal_heading_img mx-auto d-block img-fluid" src="gaming.png" alt="">
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <form>
+                <input class="search" type="text" class="mb-3" name="search" placeholder="Search..">
+              </form>
+            </div>
+            
+            <div class="col-12">
+                <div class="people-nearby">
+                  
+                  <div class="nearby-user ">
+                    
+
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        
+                          <h5 class="name_list"><a href="#" class="profile-link ">Sophia Page</a></h5>
+
+                          <div class="d-flex">
+                        
+                          <p class="text-muted">Active</p><img class="active-icon" src="active.jpg" width="10" height="10" alt="">
+                        </div>
+                        
+                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right "  >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user ">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Emma Johnson</a></h5>
+                     
+                        <div class="d-flex">
+                        
+                          <p class="text-muted">Active</p><img class="active-icon" src="active.jpg" width="10" height="10" alt="">
+                        </div>                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right">Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Nora Wilson</a></h5>
+                        
+                        <p class="text-muted">Offline</p>
+                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Diana Amber</a></h5>
+                     
+                        <p class="text-muted">Playing</p>
+                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Addison Thomas</a></h5>
+                      
+                        <div class="d-flex">
+                        
+                          <p class="text-muted">Active</p><img class="active-icon" src="active.jpg" width="10" height="10" alt="">
+                        </div>                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right"  >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Jonathon Thompson</a></h5>
+                       
+                        <p class="text-muted">Playing</p>
+                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Olivia Steward</a></h5>
+                      
+                        <div class="d-flex">
+                        
+                          <p class="text-muted">Active</p><img class="active-icon" src="active.jpg" width="10" height="10" alt="">
+                        </div>                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Elena Foster</a></h5>
+                      
+                        <div class="d-flex">
+                        
+                          <p class="text-muted">Active</p><img class="active-icon" src="active.jpg" width="10" height="10" alt="">
+                        </div>                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Brian Walton</a></h5>
+                    
+                        <p class="text-muted">Offline</p>
+                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nearby-user">
+                    <div class="row list-user animate__animated animate__backInLeft">
+                      <div class="col-2 col-sm-2">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
+                      </div>
+                      <div class="col-6 col-sm-5">
+                        <h5 class="name_list"><a href="#" class="profile-link">Cris Haris</a></h5>
+                        
+                        <p class="text-muted">Offline</p>
+                      </div>
+                      <div class="col-4 col-sm-5">
+                        <a href="index2.html" class="btn btn-primary play-btn pull-right" >Play</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+
+ 
+  </div>
+  
+</div>
+
+
+<div class="waveWrapper waveAnimation">
+ 
+    <div class="waveWrapperInner bgTop">
+      <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+    </div>
+    
+    <div class="waveWrapperInner bgMiddle">
+      <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+    </div>
+  </div>
+
+</body>
+</html>

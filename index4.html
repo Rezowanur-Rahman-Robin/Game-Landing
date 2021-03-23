@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+</head>
+<script>
+
+
+
+$(function () {
+	var numberOfStars = 200;
+
+	for (var i = 0; i < numberOfStars; i++) {
+		$(".congrats").append('<div class="blob fa fa-star ' + i + '"></div>');
+	}
+
+	animateText();
+
+	animateBlobs();
+});
+
+$(".congrats").click(function () {
+	reset();
+
+	animateText();
+
+	animateBlobs();
+});
+
+function reset() {
+	$.each($(".blob"), function (i) {
+		TweenMax.set($(this), { x: 0, y: 0, opacity: 1 });
+	});
+
+	TweenMax.set($("h1"), { scale: 1, opacity: 1, rotation: 0 });
+}
+
+function animateText() {
+	TweenMax.from($("h1"), 0.8, {
+		scale: 0.4,
+		opacity: 0,
+		rotation: 15,
+		ease: Back.easeOut.config(4)
+	});
+}
+
+function animateBlobs() {
+	var xSeed = _.random(350, 380);
+	var ySeed = _.random(120, 170);
+
+	$.each($(".blob"), function (i) {
+		var $blob = $(this);
+		var speed = _.random(1, 5);
+		var rotation = _.random(5, 100);
+		var scale = _.random(0.8, 1.5);
+		var x = _.random(-xSeed, xSeed);
+		var y = _.random(-ySeed, ySeed);
+
+		TweenMax.to($blob, speed, {
+			x: x,
+			y: y,
+			ease: Power1.easeOut,
+			opacity: 0,
+			rotation: rotation,
+			scale: scale,
+			onStartParams: [$blob],
+			onStart: function ($element) {
+				$element.css("display", "block");
+			},
+			onCompleteParams: [$blob],
+			onComplete: function ($element) {
+				$element.css("display", "none");
+			}
+		});
+	});
+}
+
+
+function openChat(){
+  document.querySelector('.chatBox').classList.toggle('d-none');
+}
+</script>
+<body>
+
+  <div class="container">
+
+    <div class="congrats text-center">
+        <a href="index2.html"> <h1 class="congrats_title">Try Again!</h1>   </a>
+        
+    </div>
+
+
+    
+   
+
+
+</div>
+
+
+<div class="waveWrapper waveAnimation">
+ 
+    <div class="waveWrapperInner bgTop">
+      <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+    </div>
+    
+    <div class="waveWrapperInner bgMiddle">
+      <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+    </div>
+  </div>
+
+</body>
+</html>

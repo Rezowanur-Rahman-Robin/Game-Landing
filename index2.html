@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+
+</head>
+<script>
+
+function comeWrapper1(){
+
+    var data1=" <a href='index3.html'><div class='gamer-item  animate__animated  animate__fadeInDown animate__delay-0.25s section-bg-2 '><div class='gamer-thumb d-flex justify-content-center'><img class='img-fluid'  src='gamers01.png' alt='gamers'></div><div class='gamer-content'><h5 class='game_title'><a href='#0'>Robin Rahman</a></h5></div></div></a>";
+   
+   document.querySelector('.game_item_wrapper_hidden_1').innerHTML=data1;
+
+   document.querySelector(".game_item_wrapper_hidden_2").style.pointerEvents = "none";
+   document.querySelector(".game_item_wrapper_hidden_3").style.pointerEvents = "none";
+   
+
+}
+
+function comeWrapper2(){
+
+    var data2=" <a href='index4.html'><div class='gamer-item  animate__animated  animate__fadeInDown animate__delay-0.25s section-bg-2 '><div class='gamer-thumb d-flex justify-content-center'><img class='img-fluid'  src='gamers02.png' alt='gamers'></div><div class='gamer-content'><h5 class='game_title'><a href='#0'>Hera Rahman</a></h5></div></div></a>";
+   
+    document.querySelector('.game_item_wrapper_hidden_2').innerHTML=data2;
+
+    document.querySelector(".game_item_wrapper_hidden_1").style.pointerEvents = "none";
+   document.querySelector(".game_item_wrapper_hidden_3").style.pointerEvents = "none";
+}
+function comeWrapper3(){
+    var data3=" <a href='index4.html'><div class='gamer-item  animate__animated  animate__fadeInDown animate__delay-0.25s section-bg-2 '><div class='gamer-thumb d-flex justify-content-center'><img class='img-fluid'  src='gamers03.png' alt='gamers'></div><div class='gamer-content'><h5 class='game_title'><a href='#0'>Panna Rahman</a></h5></div></div></a>";
+   
+    document.querySelector('.game_item_wrapper_hidden_3').innerHTML=data3;
+
+    document.querySelector(".game_item_wrapper_hidden_2").style.pointerEvents = "none";
+   document.querySelector(".game_item_wrapper_hidden_1").style.pointerEvents = "none";
+}
+
+
+</script>
+<body>
+
+    <div class="dropdown float-right m-2">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="material-icons ">
+          account_circle
+          </span>
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li class="dropdown_list"><a href="setting.html"><span class="material-icons dropdown_icon">
+            settings
+            </span> Settings</a></li>
+          <li class="dropdown_list"><a href="chating.html"><span class="material-icons dropdown_icon2">
+            chat
+            </span>Chating</a></li>
+        </ul>
+      </div>
+
+<div class="container">
+
+  <section class="how-section padding-bottom padding-top">
+    <div class="container wrapper">
+  
+        <div class="how-wrapper  animate__animated  animate__zoomInDown animate__delay-0.1s">
+            <div class="how-item ">
+                <div class="how-thumb">02</div>
+                <h5 class="title">Minutes</h5>
+            </div>
+            <div class="how-item">
+                <div class="how-thumb">34</div>
+                <h5 class="title">Seconds</h5>
+            </div>
+         
+        </div>
+    </div>
+</section>
+
+<div class="row justify-content-center mb-30-none ">
+
+
+    <div class="col-4 game_item_wrapper_hidden_1">
+      
+        <div  onclick="comeWrapper1()" class="gamer-item_hidden section-bg-2 animate__animated animate__lightSpeedInLeft animate__delay-0.2s">
+            <div class="gamer-thumb_hidden">
+                
+               
+            </div>
+           
+        </div>
+        
+    </div>
+    <div class="col-4 game_item_wrapper_hidden_2 ">
+    
+        <div onclick="comeWrapper2()" class="gamer-item_hidden section-bg-2 animate__animated  animate__fadeInUp animate__delay-0.2s">
+            <div class="gamer-thumb_hidden d-flex justify-content-center">
+                
+          
+                   
+               
+            </div>
+          
+        </div>
+     
+    </div>
+    <div class="col-4 game_item_wrapper_hidden_3 ">
+       
+        <div  onclick="comeWrapper3()" class="gamer-item_hidden section-bg-2 animate__animated animate__lightSpeedInRight animate__delay-0.2s">
+            <div class="gamer-thumb_hidden">
+              
+            </div>
+          
+        </div>
+    
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  
+</div>
+
+
+
+
+<div class="waveWrapper waveAnimation">
+ 
+    <div class="waveWrapperInner bgTop">
+      <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+    </div>
+    
+    <div class="waveWrapperInner bgMiddle">
+      <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+    </div>
+  </div>
+
+</body>
+</html>

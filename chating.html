@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+</head>
+<script>
+
+
+
+</script>
+<body>
+  <div class="dropdown float-right m-2">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="material-icons ">
+      account_circle
+      </span>
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown_list"><a href="setting.html"><span class="material-icons dropdown_icon">
+        settings
+        </span> Settings</a></li>
+      <li class="dropdown_list"><a href="chating.html"><span class="material-icons dropdown_icon2">
+        chat
+        </span>Chating</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="container_chat clearfix">
+        <div class="row">
+            <div class="col-4 chatList">
+                <div class="people-list" id="people-list">
+                    <div class="search_chatlist">
+                      <input type="text" placeholder="search" />
+                      <i class="fa fa-search"></i>
+                    </div>
+                    <ul class="list animate__animated  animate__animated animate__slideInUp">
+                      <li class="clearfix">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg" alt="avatar" />
+                        <div class="about">
+                          <div class="name">Vincent Porter</div>
+                          <div class="status">
+                            <i class="fa fa-circle online"></i> online
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="clearfix">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_02.jpg" alt="avatar" />
+                        <div class="about">
+                          <div class="name">Aiden Chavez</div>
+                          <div class="status">
+                            <i class="fa fa-circle offline"></i> left 7 mins ago
+                          </div>
+                        </div>
+                      </li>
+                      
+                   
+                      
+                      <li class="clearfix">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_08.jpg" alt="avatar" />
+                        <div class="about">
+                          <div class="name">Monica Ward</div>
+                          <div class="status">
+                            <i class="fa fa-circle online"></i> online
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="clearfix">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_09.jpg" alt="avatar" />
+                        <div class="about">
+                          <div class="name">Dean Henry</div>
+                          <div class="status">
+                            <i class="fa fa-circle offline"></i> offline since Oct 28
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="clearfix">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_10.jpg" alt="avatar" />
+                        <div class="about">
+                          <div class="name">Peyton Mckinney</div>
+                          <div class="status">
+                            <i class="fa fa-circle online"></i> online
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-8">
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
+                      
+                      <div class="chat-about">
+                        <div class="chat-with">Chat with Vincent Porter</div>
+                        <div class="chat-num-messages">already 1 902 messages</div>
+                      </div>
+                      <i class="fa fa-star"></i>
+                    </div> <!-- end chat-header -->
+                    
+                    <div class="chat-history">
+                      <ul>
+                        <li class="clearfix">
+                          <div class="message-data align-right  animate__animated animate__rollIn">
+                            <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+                            <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+                            
+                          </div>
+                          <div class="message other-message float-right  animate__animated animate__rollIn">
+                            Hi Vincent, how are you? How is the project coming along?
+                          </div>
+                        </li>
+                        
+                        <li>
+                          <div class="message-data  animate__animated animate__rollIn">
+                            <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                            <span class="message-data-time">10:12 AM, Today</span>
+                          </div>
+                          <div class="message my-message  animate__animated animate__rollIn">
+                            Are we meeting today? Project has been already finished and I have results to show you.
+                          </div>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <div class="message-data align-right  animate__animated animate__rollIn">
+                            <span class="message-data-time" >10:14 AM, Today</span> &nbsp; &nbsp;
+                            <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+                            
+                          </div>
+                          <div class="message other-message float-right  animate__animated animate__rollIn">
+                            Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
+                          </div>
+                        </li>
+                        
+                        <li>
+                          <div class="message-data  animate__animated animate__rollIn">
+                            <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                            <span class="message-data-time">10:20 AM, Today</span>
+                          </div>
+                          <div class="message my-message  animate__animated animate__rollIn">
+                            Actually everything was fine. I'm very excited to show this to our team.
+                          </div>
+                        </li>
+                        
+                     
+                        
+                      </ul>
+                      
+                    </div> <!-- end chat-history -->
+                    
+                    <div class="chat-message clearfix">
+                      <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                              
+                      <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+                      <i class="fa fa-file-image-o"></i>
+                      
+                      <button>Send</button>
+              
+                    </div> <!-- end chat-message -->
+                    
+                  </div> <!-- end chat -->
+            </div>
+        </div>
+       
+        
+   
+        
+      </div> <!-- end container -->
+    
+    <script id="message-template" type="text/x-handlebars-template">
+      <li class="clearfix">
+        <div class="message-data align-right">
+          <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
+          <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+        </div>
+        <div class="message other-message float-right">
+          {{messageOutput}}
+        </div>
+      </li>
+    </script>
+    
+    <script id="message-response-template" type="text/x-handlebars-template">
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+          <span class="message-data-time">{{time}}, Today</span>
+        </div>
+        <div class="message my-message">
+          {{response}}
+        </div>
+      </li>
+    </script>
+    
+   
+  </div>
+
+
+<div class="waveWrapper waveAnimation">
+ 
+    <div class="waveWrapperInner bgTop">
+      <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+    </div>
+    
+    <div class="waveWrapperInner bgMiddle">
+      <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+    </div>
+  </div>
+
+</body>
+</html>
